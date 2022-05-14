@@ -1,0 +1,220 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color:gray;
+    display: flex;
+    justify-content: center;
+    
+    height: 100vh;
+    
+}
+/* for background color of every elements */
+.back-color{
+    background-color: white;
+}
+.container{
+    position: relative;
+    width: 60%;
+    min-height: 100%;
+    top: -18px;
+}
+
+#page-heading{
+    text-align: center;
+    border-bottom: grey;
+    padding-top: 20px;
+}
+.bottom{
+    border: none;
+}
+.information{
+    margin: 5px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    padding: 6px;
+    height: 50px;
+    margin-top: 0;
+}
+.form{
+    margin-top: -22px;
+
+}
+
+.contact{
+    list-style: none;
+}
+.category-date{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom:2px solid gainsboro ;
+    padding: 5px;
+}
+.date{
+    border-left: 2px solid gainsboro;
+    margin-left: 130px;
+    padding-left: 6px;
+    border: none;
+}
+.category{
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+    border: none;
+    
+}
+.add-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:2px solid gainsboro ;
+    padding: 10px;
+  
+}
+.add-task{
+    background-color: black;
+ 
+    padding: 10px;
+    opacity: 0.8;
+    margin-right: 3px;
+    
+}
+#add-button{
+    background-color: black;
+    opacity: 0.8;
+    border: none;
+    color: aliceblue;
+    padding-left: 10px;
+    font-size: large;
+    
+}
+/* #delete-button{
+    background-color: red;
+    opacity: 0.8;
+    border: none;
+    color: aliceblue;
+    padding-left: 2px;
+    font-size: large;
+} */
+
+.delete-task{
+    background-color: red;
+    color: aliceblue;
+    padding:7px 6px;
+    margin-left: 1px;
+    border: none;
+}
+.delete-task a{
+    background-color:red;
+    opacity: 0.8;
+    border: none;
+    color: white;
+    padding-left: 2px;
+    /* font-size: large; */
+    text-decoration: none;
+}
+
+
+.top-margin{
+    margin-top: 0px;
+}
+
+.contact{
+    padding: 3px 10px;
+    border: 1px solid white;
+     box-shadow: 1px 1px 1px 1px lightgrey;
+    color:black;
+    opacity: 0.8;
+    display: flex;
+    
+    margin-left: -20px;
+}
+.contact .details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+.d-d{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: -14px;
+    margin-left: 10px;
+    padding-top: 0;
+}
+/* color for every category */
+.cat-color-Work{
+    background-color:blueviolet;
+    color: aliceblue;
+    height: 40px;
+    width: 100px;
+    padding: 4px;
+   
+}
+
+
+
+.cat-color-College{
+    background-color:yellow;
+    color: aliceblue;
+    height: 40px;
+    width: 100px;
+    padding: 4px;
+    
+}
+
+
+.cat-color-Personal{
+    background-color:blue;
+    color: aliceblue;
+    height: 40px;
+    width: 100px;
+    padding: 4px;
+   
+}
+
+.cat-color-Office{
+    background-color:gray;
+    color: aliceblue;
+    height: 40px;
+    width: 100px;
+    padding: 4px;
+   
+}
+
+.cat-color-Other{
+    background-color:green;
+    color: aliceblue;
+    height: 40px;
+    width: 100px;
+    padding: 4px;
+}
+   
+
+#cat{
+    text-align: center;
+}
+
+/* .contact:hover{
+    background-color: lightgray;
+    opacity: 0.3;
+} */
+
+/* .contact .details #checkbox:checked{
+background-color: lightblue;
+} */
+
+
+
+/* #checkbox:checked + .d-d{
+    background-color: grey !important;
+} */
+
+
+#todo-list-container{
+    margin-top: -17px;
+}

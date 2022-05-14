@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+        <script src="https://kit.fontawesome.com/260497237c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- Adding the header -->
+            <div class="back-color ">
+            <h1 id="page-heading"><i class="fas fa-tasks"></i>
+                TODO APP</h1>
+                </div>
+
+                <!-- taking the input -->
+<div class="back-color form">
+    <form action="/create-todolist" method="post" id="new-list-form">
+        <div class="information">
+            <label for="description">DESCRIPTION</label><br>
+            <input class="bottom" type="text" name="description" placeholder="What do you need to do ?" required>
+        </div>
+<div class="category-date"> 
+        <span class="category">
+            <label for="category">CATEGORY</label><br>
+            <select name="category" >
+                <option value="" selected>Choose a category</option>
+                <option >Personal </option>
+                <option >Work</option>
+                <option >College</option>
+                <option >Office</option>
+                <option >Other</option>
+              </select>
+        </span>
+        <span class="date">
+            <label for="date">DUE DATE</label><br>
+            <input type="date" required name="date">
+        </span>
+    </div>
+
+        <!-- add and delete button  -->
+        <div class="add-delete">
+            <!-- Adding the task -->
+            <div class="add-task">
+            <button type="submit" id="add-button">
+                <i class="fas fa-plus"></i>
+                ADD TASK</button>
+            </div>
+               
+           
+        </div>
+
+
+
+    </form>
+    </div>
+
+
+<!-- printing the todo list -->
+        <div id="todo-list-container">
+            <ul class="align-center back-color">
+                <% for(let i of todo_list) {%>
+                  <li class="contact txt">
+                      <div class="details">
+                          
+
+                 
+      <!-- Deleting the task -->
+
+                        <div class="delete-task">
+                           
+                            <a href="/delete-todolist/?id=<%= i._id %>">
+                            
+            
+                                <!-- Deleting the task from front end -->
+                                <!-- <button type="submit" id="delete-button" onclick="delBoxes();"> -->
+                               
+                                <i class="fas fa-trash-alt"></i> DELETE TASK </button>
+            
+                            </a>
+                        </div>
+
+
+
+                        <div class="d-d">
+                      <p><%= i.description %></p>
+                      <p id="top-margin"> <i class="fas fa-calendar-alt"></i> </i><%= i.date.toLocaleDateString('in') %></p>
+                      </div>
+                      <div class="cat-color-<%= i.category %>"> <p id="cat"><%= i.category %></p></div>
+
+                  </div>
+
+
+
+                  
+                  </li>
+
+                    <%}%>
+            </ul>
+
+        </div> 
+    </div>
+        
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
